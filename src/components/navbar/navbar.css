@@ -1,0 +1,153 @@
+.btn-ham {
+    color: var(--faux-lime-green);
+    font-size: 1.5rem;
+    background-color: var(--black);
+    border: none;
+    outline: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 0.1rem solid var(--faux-lime-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    transition: all 2s ease-in-out;
+    animation: btnBounce 2s infinite;
+    z-index: 999;
+}
+
+.btn-ham:hover {
+    color: var(--white);
+    background-color: var(--black);
+    border: 0.1rem solid var(--white);
+    transform: scale(1.2);
+    transition: all 2s ease-in-out;
+}
+
+.btn-ham:focus {
+    outline: none;
+}
+nav {
+     width: 100vw;
+     height: 100vh;
+     background: var(--faux-lime-green);
+     padding: 10%;
+     transition: width 600ms ease;
+     transform: rotateX(-90deg);
+     transition: all 1s ease-in-out;
+     position: absolute;
+     z-index: 999;
+}
+.icon-close{
+position: absolute;
+top: 1rem;
+right: 1rem;
+cursor: pointer;
+pointer-events: all;
+font-size: 1rem;
+
+}
+.nav-main{
+    display: flex;
+    padding: 10%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+li{
+    list-style: none;
+    margin: 1rem;
+    font-weight: 600;
+    transition: all 1s ease-in-out;
+}
+
+li:hover{
+    transform: scale(1.2);
+    color: var(--white);
+}
+nav svg{
+    border: 0.1rem solid var(--black);
+    font-size: 2rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+    color: var(--black);
+}
+li a {
+    color: var(--black);
+}
+li a:hover {
+    color: var(--black);
+    text-decoration: none;
+    color: var(--white);
+}
+
+
+.nav-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* animation */
+
+@keyframes btnBounce {
+    0% {
+        transform: scale(1);
+        border: 0.1rem solid var(--faux-lime-green);
+        color: var(--faux-lime-green);
+    }
+
+    25% {
+        transform: scale(1.1);
+        border: 0.1rem solid var(--summer-sky);
+        color: var(--summer-sky);
+    }
+
+    50% {
+        transform: scale(1.2);
+        border: 0.1rem solid var(--white);
+        color: var(--white);
+    }
+
+    75% {
+        transform: scale(1.1);
+        border: 0.1rem solid var(--summer-sky);
+        color: var(--summer-sky);
+    }
+
+    100% {
+        transform: scale(1);
+        border: 0.1rem solid var(--faux-lime-green);
+        color: var(--faux-lime-green);
+    }
+}
+@keyframes iconBounce {
+    0% {
+        transform: scale(1);
+        color: var(--faux-lime-green);
+    }
+
+    25% {
+        transform: scale(1.05);
+        color: var(--summer-sky);
+    }
+
+    50% {
+        transform: scale(1.1);
+        color: var(--white);
+    }
+
+    75% {
+        transform: scale(1.05);
+        color: var(--summer-sky);
+    }
+
+    100% {
+        transform: scale(1);
+        color: var(--faux-lime-green);
+    }
+}

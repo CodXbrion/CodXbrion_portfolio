@@ -1,0 +1,204 @@
+.section-skills {
+    background-image: url('../../assets/images/bg-7.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.section-skills-bg {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.skillbar {
+    width: 9.2rem;
+    height: 9.2rem;
+    line-height: 9.2rem;
+    border-radius: 50%;
+    color: var(--faux-lime-green) !important;
+    margin: 11.8rem auto;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    font-size: 2.75rem;
+    font-weight: 600;
+    color: var(--black);
+    transition: all 0.25s 0.2s;
+    border: 0.1rem solid var(--faux-lime-green);
+}
+
+.skillbar p {
+    transition: all 2s ease-in-out;
+    animation: skills 5s linear infinite;
+}
+
+.skillbar .menu {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+    position: absolute;
+    top: -4.6rem;
+    left: -4.6rem;
+    border: 8rem solid transparent;
+    cursor: default;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 1.5s 0.07s;
+}
+
+.skillbar:hover .menu {
+    transition: transform 0.4s 0.08s, z-index 0s 0.5s;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.skillbar .menu li {
+    position: absolute;
+    top: -6.2rem;
+    left: -6.2rem;
+    transform-origin: 6.2rem 6.2rem;
+    transition: all 0.5s 0.1s;
+}
+
+.skillbar:hover .menu li {
+    transition: all 0.7s;
+}
+
+.skillbar:hover .menu li a {
+    width: 3.1rem;
+    height: 3.1rem;
+    line-height: 3.1rem;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 60%;
+    color: var(--faux-lime-green);
+    transition: 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    border: 0.1rem solid var(--faux-lime-green);
+}
+
+.skillbar:hover .menu li a:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.skillbar:hover .menu li:nth-child(1) {
+    transition-delay: 0.02s;
+    transform: rotate(85deg);
+}
+
+.skillbar:hover .menu li:nth-child(1) a {
+    transition-delay: 0.04s;
+    transform: rotate(635deg);
+}
+
+.skillbar:hover .menu li:nth-child(2) {
+    transition-delay: 0.04s;
+    transform: rotate(125deg);
+}
+
+.skillbar:hover .menu li:nth-child(2) a {
+    transition-delay: 0.08s;
+    transform: rotate(595deg);
+}
+
+.skillbar:hover .menu li:nth-child(3) {
+    transition-delay: 0.06s;
+    transform: rotate(165deg);
+}
+
+.skillbar:hover .menu li:nth-child(3) a {
+    transition-delay: 0.06s;
+    transform: rotate(165deg);
+}
+
+.skillbar:hover .menu li:nth-child(4) {
+    transition-delay: 0.08s;
+    transform: rotate(205deg);
+}
+
+.skillbar:hover .menu li:nth-child(4) a {
+    transition-delay: 0.16s;
+    transform: rotate(515deg);
+}
+
+.skillbar:hover .menu li:nth-child(5) {
+    transition-delay: 0.1s;
+    transform: rotate(245deg);
+}
+
+.skillbar:hover .menu li:nth-child(5) a {
+    transition-delay: 0.2s;
+    transform: rotate(475deg);
+}
+
+.skillbar:hover .menu li:nth-child(6) {
+    transition-delay: 0.08s;
+    transform: rotate(285deg);
+}
+
+.skillbar:hover .menu li:nth-child(6) a {
+    transition-delay: 0.08s;
+    transform: rotate(475deg);
+}
+
+/* animation */
+@keyframes skills {
+    0% {
+        transform: rotate(0deg);
+        color: var(--faux-lime-green);
+        transition: all 1s ease-in-out;
+    }
+
+    25% {
+        color: var(--summer-sky);
+        transition: all 1s ease-in-out;
+    }
+
+    50% {
+        color: var(--white);
+        transition: all 1s ease-in-out;
+    }
+
+    75% {
+        color: var(--summer-sky);
+    }
+
+    100% {
+        transform: rotate(359deg);
+        color: var(--faux-lime-green);
+    }
+}
+
+/* media queries */
+
+@media screen and (max-width: 440px) {
+    .section-skills-bg {
+        padding: 1rem;
+    }
+    .skillbar {
+        width: 8rem;
+        height: 8rem;
+        line-height: 8rem;
+        border-radius: 50%;
+        margin: 10rem auto;
+        position: relative; 
+        font-size: 2rem;
+    }
+    .skillbar .menu {     
+        position: absolute;
+        top: -5rem;
+        left: -5rem;
+        border: 8rem solid transparent;
+        border-radius: 50%;
+    }
+}
